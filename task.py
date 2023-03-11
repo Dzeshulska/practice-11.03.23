@@ -1,32 +1,32 @@
-data_base = [
-    {
-    "name": "Alla",
-     "age" : "25",
-     "Wallet" : "150"
-     },
-     {
-    "name" : "Ivan",
-     "age" : "35",
-     "wallet" : "250"
-     },
-     {"login" : "tn@.",
-      "password" : "12325"
-     }
-]
+data_base = []
 
-for user in data_base:
-    print(user)
 
-login = input("Enter your login")
-password = input("Enter your password")
-user = registration(login, pasword)
-print(user)
 
-if age < 18 and len(name) < 2 and wallet < 0:
-    print("Error")
+#   import random
+#   print(random.randint(0, 1000))
+#   print
+
+
+def registration(user_name, user_age, user_wallet) :
+    return{
+        "name" : user_name,
+        "age" : user_age,
+        "wallet" : user_wallet
+    }
+
+user_name = input("Enter your name")
+user_age = input("Enter your age")
+
+if len(user_name ) > 2 and int(user_age) > 18 :    
+    data_base.append([user_name] + [user_age] )
+    print(data_base)
 else:
-    print("Great!")
+    print("Error")
 
-    import random
-    print(random.randint(0, 1000))
-    print
+def autorization(array_of_date_base) :
+    for user in array_of_date_base :
+        print(user)
+    
+
+
+
